@@ -1,0 +1,183 @@
+/* reset css */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.attribution { font-size: 11px; text-align: center; color: white;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+html{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+/* reset css */
+
+body{
+    background-color: hsl(229, 57%, 11%);
+}
+
+#main{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 50%;
+    height: 50%;
+    margin: 200px auto;
+}
+
+
+#main .box{
+    margin: 10px;
+}
+
+body .desktop{
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    bottom: 0px;
+}
+
+body .mobile{
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    z-index: -1;
+}
+
+#fylo{
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px 85px 10px 10px;
+    padding: 20px 70px 20px 20px;
+}
+
+#fylo .box{
+    margin-right: 85px;
+}
+
+#fylo .button{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin-top: 20px;
+
+}
+
+#fylo .logo{
+    width: 70%;
+}
+
+#fylo .button .document,
+#fylo .button .folder,
+#fylo .button .upload{
+    width: 100%;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 7px;
+    text-align: center;
+    margin-right: 15px;
+    padding: 10px;
+}
+
+#storage{
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px;
+    margin-left: 15px;
+    padding: 20px;
+    width: 100%;
+}
+
+#storage .used-space{
+    color: hsl(229, 7%, 55%);
+}
+
+#storage .used-space span{
+    color: hsl(243, 100%, 93%);
+    font-weight: 700;
+}
+
+#storage .statusbar{
+    margin-top: 10px;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 100px;
+    margin-bottom: 5px;
+}
+
+#storage .statusbar .gradient{
+    width: 80%;
+    padding: 6px;
+    border-radius: 10px;
+    background: linear-gradient(60deg, hsl(6, 100%, 80%) , hsl(335, 100%, 65%));
+    position: relative;
+}
+
+#storage .statusbar .whitedot{
+    padding: 6px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: hsl(228, 56%, 26%) 2px 0px 10px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+#storage .free-space{
+    position: absolute;
+    padding: 8px;
+    font-weight: 700;
+    background-color: white;
+    border-radius: 7px;
+    top: 195px;
+    right: 27%;
+}
+
+#storage .free-space span{
+    color: hsl(229, 7%, 55%);
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+#storage .min-max{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: hsl(243, 100%, 93%);
+    font-weight: 700;
+}
+
+/* mobile */
+@media only screen and (min-device-width : 375px) and (max-device-width : 740px)  {
+body .desktop{
+    display: none;
+}
+
+body .mobile{
+    display: block;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 50%;
+    margin: 200px auto;
+}
+
+#fylo{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#storage{
+    margin-left: 0px;
+}
+
+#storage .free-space{
+    top: 45.5%;
+    right: 33%;
+    bottom: auto;
+}
+} 
+/* mobile */
